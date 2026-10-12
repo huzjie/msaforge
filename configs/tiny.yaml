@@ -1,0 +1,11 @@
+# tiny config for fast tests / demos
+attention:
+  dim: 64
+  block_size: 16
+  top_k_blocks: 2
+model:
+  n_layers: 2
+  vocab_size: 1024
+backend:
+  name: mock
+  skill: 0.5

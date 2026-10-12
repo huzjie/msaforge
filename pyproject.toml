@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "msaforge"
+version = "1.0.0"
+description = "MiniMax Sparse Attention (MSA) zero-dependency reference implementation"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "Apache-2.0" }
+authors = [{ name = "ai-daily-agent" }]
+
+[tool.setuptools.packages.find]
+include = ["msaforge*"]

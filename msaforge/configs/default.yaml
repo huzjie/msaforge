@@ -1,0 +1,29 @@
+# msaforge default configuration
+attention:
+  dim: 256
+  n_heads: 8
+  head_dim: 32
+  n_kv_heads: 2
+  block_size: 64
+  top_k_blocks: 32
+
+model:
+  n_layers: 6
+  vocab_size: 4096
+  max_seq_len: 8192
+  vision_patch: 16
+  vision_dim: 256
+  n_frames: 8
+
+backend:
+  name: mock
+  endpoint: ""
+  model_id: MiniMax-M3
+  api_key: ""
+  skill: 0.5
+  temperature: 1.0
+
+train:
+  lr: 0.1
+  epochs: 20
+  delta_up: 0.05

@@ -1,0 +1,12 @@
+# large config (1M context, more experts-like scaling)
+attention:
+  dim: 512
+  block_size: 64
+  top_k_blocks: 1820
+model:
+  n_layers: 24
+  vocab_size: 65536
+  max_seq_len: 1048576
+backend:
+  name: mock
+  skill: 0.5

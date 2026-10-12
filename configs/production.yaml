@@ -1,0 +1,14 @@
+# production config (connect to a real OpenAI-compatible endpoint)
+attention:
+  dim: 256
+  block_size: 64
+  top_k_blocks: 32
+model:
+  n_layers: 6
+  vocab_size: 4096
+backend:
+  name: openai
+  endpoint: http://localhost:8000
+  model_id: MiniMax-M3
+  api_key: ""
+  skill: 1.0

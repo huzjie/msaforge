@@ -1,0 +1,19 @@
+replicaCount: 2
+
+image:
+  repository: huzjie/msaforge
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8000
+
+resources:
+  requests:
+    memory: "256Mi"
+    cpu: "250m"
+  limits:
+    memory: "1Gi"
+    cpu: "1"

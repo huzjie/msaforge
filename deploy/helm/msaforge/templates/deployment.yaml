@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-msaforge
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: msaforge
+  template:
+    metadata:
+      labels:
+        app: msaforge
+    spec:
+      containers:
+        - name: msaforge
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: 8000
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
